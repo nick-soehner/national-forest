@@ -1,0 +1,107 @@
+:root {
+    --brown: #4d2615;
+    --yellow: #fbe76e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+/* =============== HEADER ===========================*/
+
+header {
+    display: flex;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: 100;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin: 0 auto;
+}
+
+header a {
+    text-decoration: none;
+    color: var(--yellow);
+    text-shadow: var(--brown) 2px 1px;
+    letter-spacing: 1px;
+}
+
+header li a {
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+header .icon img {
+    width: 300px;
+}
+
+header nav {
+    padding: 100px 0;
+}
+
+header nav a:hover {
+    color: var(--yellow);
+}
+
+header nav a::before {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: var(--brown);
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+header nav a:hover::before {
+    width: 100%;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+header nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header nav li {
+    display: inline-block;
+    margin-left: 1.5em;
+    padding-top: 0.5em;
+    position: relative;
+}
+
+/* =============== LANDING ===========================*/
+
+#landing {
+    background-image: url(./img/background.jpg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
